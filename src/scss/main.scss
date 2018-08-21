@@ -1,0 +1,89 @@
+body {
+  background-color: #D7D7D7;
+}
+@mixin ob($size) {
+  height: $size;
+  width: $size;
+}
+
+.container, .container-fluid {
+  position: relative;
+}
+.slide {
+  max-height: 100vh;
+  height: 100vh;
+  &.slide-1 {
+    background: no-repeat center/cover url('/assets/ludzie-ziemia.png');
+    .niebo {
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 50vw;
+     height: 25vh;
+     background: no-repeat center/cover url('/assets/niebo-crop.png'); 
+     z-index: -10;
+    }
+    .t1 {
+      margin-top: 7vh;
+    }
+    .t2 {
+      margin-top: 20vh;
+    }
+    .ob1 {
+      position: absolute;
+      left: 40%;
+      top: 30px;
+    }
+    .ob2 {
+      position: absolute;
+      left: 80%;
+    }
+  }
+  &.slide-2 {
+    .pani {
+      position: absolute;
+      width: 40vw;
+      height: 80vh;
+      margin-top: 15vh;
+      right: 8%;
+      z-index: 5;
+      background: no-repeat center/cover url('/assets/pani.png');
+    }
+    .tlo {
+      position: absolute;
+      left: 0;
+      top: 10vh;
+      height: 80vh;
+      width: 66vw;
+      background: no-repeat center/cover url('/assets/tlo.png');
+    }
+    .t1 {
+      margin-top: 5vh;
+    }
+  }
+}
+
+.ob {
+  background-color: #FF5722;
+  border-radius: 50%;
+  &.ob-xl {
+    @include ob(35vh);
+  }
+  &.ob-sm {
+    @include ob(10vh); 
+  }
+}
+.title-label {
+  padding: 5px 15px;
+  > h1 {
+    display: inline-block;
+    font-family: 'Muli', sans-serif;
+    font-weight: 800;
+    font-size: 55px;
+    margin: 0;
+    padding: 5px 15px;
+    background-color: #fff;
+    text-transform: uppercase;
+    z-index: 10;
+  }
+}
