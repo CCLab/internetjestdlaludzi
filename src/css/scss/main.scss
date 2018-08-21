@@ -91,32 +91,31 @@ body {
       z-index: 10;
     }
   }
-  &.zagrozenia {
-    .card {
-      text-transform: uppercase;
-      height: 25rem;
-      .card-body {
-        display: flex;
-        align-items: center;
-        .card-title {
-          font: 800 2rem/2 'Muli', sans-serif;
-        }
+}
+.zagrozenia {
+  .card {
+    text-transform: uppercase;
+    height: 25rem;
+    .card-body {
+      display: flex;
+      align-items: center;
+      .card-title {
+        font: 800 2rem/2 'Muli', sans-serif;
       }
     }
-    .obrazek {
-      background-position: center center;
-      background-size: contain;
-      background-repeat: no-repeat;
-      height: 100%;
-      &.z1 { background-image: url('/assets/zagrozenia_1.jpg') }
-      &.z2 { background-image: url('/assets/zagrozenia_2.jpg') }
-      &.z3 { background-image: url('/assets/zagrozenia_3.jpg') }
-      &.z4 { background-image: url('/assets/zagrozenia_4.jpg') }
-      &.z5 { background-image: url('/assets/zagrozenia_5.jpg') }
-    }
+  }
+  .obrazek {
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 100%;
+    &.z1 { background-image: url('/assets/zagrozenia_1.jpg') }
+    &.z2 { background-image: url('/assets/zagrozenia_2.jpg') }
+    &.z3 { background-image: url('/assets/zagrozenia_3.jpg') }
+    &.z4 { background-image: url('/assets/zagrozenia_4.jpg') }
+    &.z5 { background-image: url('/assets/zagrozenia_5.jpg') }
   }
 }
-
 .ob {
   background-color: $accent;
   border-radius: 50%;
