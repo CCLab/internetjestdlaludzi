@@ -38,6 +38,11 @@ body {
       position: absolute;
       left: 80%;
     }
+    .ob3 {
+      position: absolute;
+      top: 50vh;
+      left: 60%;
+    }
   }
   &.slide-2 {
     .pani {
@@ -72,6 +77,9 @@ body {
   &.ob-sm {
     @include ob(10vh); 
   }
+  &.ob-md {
+    @include ob(18vh);
+  }
 }
 .title-label {
   padding: 5px 15px;
@@ -85,5 +93,8 @@ body {
     background-color: #fff;
     text-transform: uppercase;
     z-index: 10;
+    &.sm {
+      font-size: 28px;
+    }
   }
 }
