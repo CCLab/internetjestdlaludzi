@@ -1,3 +1,3 @@
-const basic = () => {
-  return null;
-}
+$(document).ready(() => {
+
+});

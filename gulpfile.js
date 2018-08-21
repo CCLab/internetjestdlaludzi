@@ -11,7 +11,10 @@ const config = {
       'src/css/*.css',
       'src/css/scss/*.scss',
     ],
-    js: 'src/js/*.js',
+    js: [
+      'src/js/jquery.js',
+      'src/js/*.js',
+    ],
   },
   output: {
     folder: 'dist',
