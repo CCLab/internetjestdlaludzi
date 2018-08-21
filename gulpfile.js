@@ -7,7 +7,10 @@ const babel = require('gulp-babel');
 
 const config = {
   input: {
-    css: 'src/scss/*.scss',
+    css: [
+      'src/css/*.css',
+      'src/css/scss/*.scss',
+    ],
     js: 'src/js/*.js',
   },
   output: {
