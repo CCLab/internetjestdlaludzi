@@ -60,7 +60,7 @@ body {
       margin-top: 15vh;
       right: 8%;
       z-index: 5;
-      background: no-repeat center/cover url('/assets/pani.png');
+      background: no-repeat center/contain url('/assets/pani.png');
     }
     .tlo {
       position: absolute;
@@ -83,8 +83,9 @@ body {
     }
     .ob-group {
       position: absolute;
-      left: 70%;
-      height: 100vh;
+      left: 60%;
+      top: 10vh;
+      height: 80vh;
       display: flex;
       flex-direction: column;
       justify-content: space-around;
@@ -106,12 +107,59 @@ body {
       right: 25%;
       top: 20%;
     }
+    .card {
+      width: initial;
+      display: inline-block;
+      position: absolute;
+      position:relative;
+      .card-text {
+        z-index: 15;
+      }
+      &.c1 {
+        top: 40%;
+        left: 30%;
+      }
+      &.c2 {
+        top: 60%;
+        left: 40%;
+      }
+    }
+    .ob {
+      position:absolute;
+      top: -30%;
+      left: -10%;
+    }
   }
   &.slide-5 {
     background-color: #fff;
+    padding-top: 7rem;
+    h1 {
+      font: 800 3rem 'Muli', sans-serif;
+      text-transform: uppercase;
+    }
   }
 }
-.slide-3 {
+a, a:visited {
+  h1, h2 {
+    color: #000;
+  }
+}
+.kropeczki {
+  position: absolute;
+  width: 4rem;
+  height: 22rem;
+  background: no-repeat center/contain url('/assets/kropki.png');
+  z-index: 15;
+  &.k1 {
+    top: -10%;
+    right: 15%;
+  }
+  &.k2 {
+    bottom: -10%;
+    left: 5%;
+  }
+}
+.zagrozenia {
   .card {
     text-transform: uppercase;
     height: 25rem;
