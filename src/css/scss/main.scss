@@ -1,12 +1,24 @@
 $bg-gray: #D7D7D7;
 $accent: #FF5722;
+$breakpoint-sm: 768px;
+$breakpoint-md: 1040px;
 
 @mixin ob($size) {
   height: $size;
   width: $size;
 }
+@mixin big-pic($url, $size) {
+  background: no-repeat center/$size url($url);
+}
 
-
+html {
+  @media screen and (max-width: $breakpoint-md) {
+    font-size: 12px;
+  }
+  @media screen and (max-width: $breakpoint-sm) {
+    font-size: 10px;
+  }
+}
 body {
   background-color: $bg-gray;
 }
@@ -18,6 +30,10 @@ body {
   height: 100vh;
   &.slide-1 {
     background: no-repeat center/cover url('/assets/ludzie-ziemia.png');
+      @media screen and (max-width: $breakpoint-sm) {
+        background-size: contain;
+        background-position: center bottom;
+      }
     .niebo {
      position: absolute;
      top: 0;
@@ -39,6 +55,9 @@ body {
     .ob1 {
       left: 40%;
       top: 30px;
+      @media screen and (max-width: $breakpoint-sm) {
+        left: -10%;
+      }
     }
     .ob2 {
       left: 80%;
@@ -61,6 +80,12 @@ body {
       right: 8%;
       z-index: 5;
       background: no-repeat center/contain url('/assets/pani.png');
+      @media screen and (max-width: $breakpoint-sm) {
+        right: 0;
+        height: 100%;
+        width: 50vw;
+        margin-top: 0;
+      }
     }
     .tlo {
       position: absolute;
@@ -89,7 +114,29 @@ body {
       display: flex;
       flex-direction: column;
       justify-content: space-around;
-      z-index: 10;
+      z-index: 30;
+      @media screen and (max-width: $breakpoint-sm) {
+        flex-direction: row;
+        top: initial;
+        bottom: 5%;
+        left: 0;
+        right: 0;
+        height: initial;
+      }
+      .title-label > h1 {
+        @media screen and (max-width: $breakpoint-sm) {
+          font-size: 1rem;
+        }
+      }
+    }
+    .ob-md {
+      @media screen and (max-width: $breakpoint-sm) {
+        @include ob(10vh);
+      }  
+    }
+
+    .container {
+      z-index: 20;
     }
   }
   &.slide-4 {
@@ -106,28 +153,40 @@ body {
       position: absolute;
       right: 25%;
       top: 20%;
+      @media screen and (max-width: $breakpoint-sm) {
+        left: 2rem;
+        right: initial;
+      }
     }
     .card {
       width: initial;
       display: inline-block;
+      position: relative;
+      .card-body {
+        .card-text {
+          z-index: 30;
+          position: relative;
+        }
+      }
+    }
+    .series {
       position: absolute;
-      position:relative;
-      .card-text {
-        z-index: 15;
-      }
-      &.c1 {
-        top: 40%;
-        left: 30%;
-      }
-      &.c2 {
-        top: 60%;
-        left: 40%;
+      bottom: 3rem;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      width: 100%;
+      justify-content: space-around;
+      @media screen and (max-width: $breakpoint-sm) {
+        flex-direction: column;
+        flex-wrap: nowrap;
+        padding: 0 2rem;
       }
     }
     .ob {
       position:absolute;
-      top: -30%;
-      left: -10%;
+      top: -2rem;
+      left: -2rem;
     }
   }
   &.slide-5 {
@@ -160,9 +219,22 @@ a, a:visited {
   }
 }
 .zagrozenia {
+  .card, .obrazek {
+    height: 25rem;
+  }
+  article {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    &:nth-child(even) {
+      flex-direction: row-reverse;
+    }
+    @media screen and (max-width: $breakpoint-sm) {
+      flex-direction: column !important;
+    }
+  }
   .card {
     text-transform: uppercase;
-    height: 25rem;
     .card-body {
       display: flex;
       align-items: center;
@@ -175,7 +247,7 @@ a, a:visited {
     background-position: center center;
     background-size: contain;
     background-repeat: no-repeat;
-    height: 100%;
+    width: 50vw;
     &.z1 { background-image: url('/assets/zagrozenia_1.jpg') }
     &.z2 { background-image: url('/assets/zagrozenia_2.jpg') }
     &.z3 { background-image: url('/assets/zagrozenia_3.jpg') }
@@ -205,6 +277,7 @@ footer {
   }
 }
 .title-label {
+  z-index: 30;
   > h1 {
     display: inline-block;
     font-family: 'Muli', sans-serif;
@@ -214,7 +287,7 @@ footer {
     padding: 0.4rem 1rem;
     background-color: #fff;
     text-transform: uppercase;
-    z-index: 10;
+    z-index: 30;
   }
   &.md > h1 {
     font-size: 2.3rem;
@@ -223,7 +296,9 @@ footer {
     font-size: 1.7rem;
   }
   &.pull-10 {
-    margin-left: -100px;
+    @media screen and (min-width: $breakpoint-sm) {
+      margin-left: -100px;
+    }
   }
 }
 .card {
@@ -234,5 +309,18 @@ footer {
     .card-text {
       font: 1.3rem 'Open Sans', sans-serif;
     }
+  }
+}
+.overlay {
+  display: none;
+  &.on {
+    display: block;
+    position: fixed;
+    top: 5%;
+    left: 5%;
+    right: 5%;
+    bottom: 5%;
+    z-index: 100;
+    background-color: #fff;
   }
 }
