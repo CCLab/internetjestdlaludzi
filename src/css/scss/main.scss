@@ -1,5 +1,7 @@
 $bg-gray: #D7D7D7;
 $accent: #FF5722;
+$orange: #ff5722;
+$main-text: #5e5e5e;
 $breakpoint-sm: 768px;
 $breakpoint-md: 1040px;
 
@@ -263,11 +265,6 @@ a, a:visited {
     &.z5 { background-image: url('/assets/zagrozenia_5.jpg') }
   }
 }
-footer {
-  background-color: #5E5E5E;
-  color: #F4F3F0;
-  padding: 10rem;
-}
 .ob {
   background-color: $accent;
   border-radius: 50%;
@@ -370,4 +367,80 @@ footer {
       background: no-repeat center/contain url('/assets/longread.png')
     }
   }
+}
+footer {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    
+    .row:first-child >div {
+        //min-height: 230px;
+        .socials-menu {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            li {
+                display: inline-block;
+                padding: 32px 12px;
+                a {
+                    transition: .2s ease-in-out;
+                    color: #000;
+                    &:hover {
+                        color: $main-text;
+                    }
+                }
+                i.fa {
+                    font-size: 32px;
+                }
+            }
+        }
+    }
+    hr {
+        margin: 40px 0;
+    }
+    a {
+        color: #5e5e5e;
+        transition: .2s ease-in-out color;
+        &:hover {
+            color: $orange;
+            text-decoration: none;
+        }
+    }
+    h5 {
+        font-weight: bold;
+        font-size: 14px;
+        margin-bottom: 8px;
+        a {
+            color: $main-text;
+        }
+    }
+    p {
+        color: #5e5e5e;
+        font-size: 14px;
+        font-weight: normal;
+        white-space: normal;
+    }
+    
+    img[alt='stgu'] {
+        margin-top: 23px;
+    }
+    svg {
+        height: 15px;
+        width: 80px;
+    }
+
+    ul.temporary-menu {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        font-weight: normal;
+        li {
+            font-size: 14px;
+            padding: 2px 0;
+        }
+    }
+    .cc-box {
+        svg {
+            margin-top: 10px;
+        }
+    }
 }
