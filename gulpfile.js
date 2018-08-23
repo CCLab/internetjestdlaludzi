@@ -41,7 +41,7 @@ gulp.task('build-js', () => {
   return gulp
     .src(config.input.js)
     .pipe(concat(config.output.js))
-    .pipe(babel({'presets': ['env']}))
+    .pipe(babel({'presets': ['env']}).on('error', console.error.bind(console)))
     .pipe(uglify())
     .pipe(gulp.dest(config.output.folder));
 });
