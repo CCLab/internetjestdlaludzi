@@ -196,6 +196,14 @@ body {
       font: 800 3rem 'Muli', sans-serif;
       text-transform: uppercase;
     }
+    a, a:visited, a:hover {
+      text-decoration: none;
+      color: #2A2A2A
+    }
+    p {
+      font: 300 1.5rem 'Open Sans', sans-serif;
+      text-transform: uppercase;
+    }
   }
 }
 a, a:visited {
@@ -314,16 +322,52 @@ footer {
     display: none;
   }
 }
-.overlay {
+.overlay-wrapper {
+  background-color: rgba(0,0,0,0.2);
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  top:0;
+  left:0;
+  right: 0;
+  bottom:0;
   display: none;
+  position: fixed;
+  z-index: 100;
+}
+.overlay {
   &.on {
     display: block;
-    position: fixed;
-    top: 5%;
-    left: 5%;
-    right: 5%;
-    bottom: 5%;
+    position: relative;
+    overflow-y: scroll;
+    font-size: 1.5rem;
+    width: 90%;
+    margin: 2rem auto;
+    max-height: 90vh;
     z-index: 100;
     background-color: #fff;
+  }
+  .container {
+    padding-top: 3rem;
+    z-index: 100;
+  }
+  .bar {
+    background-color: #2A2A2A;
+    display: flex;
+    padding: 2rem 0;
+    justify-content: space-evenly;
+    a {
+      display:block;
+      width: 100%;
+    }
+    .fb-sharelink {
+      background: no-repeat center/contain url('/assets/share.png')
+    }
+    .wyslijemail {
+      background: no-repeat center/contain url('/assets/email.png')
+    }
+    .stanowisko {
+      background: no-repeat center/contain url('/assets/longread.png')
+    }
   }
 }

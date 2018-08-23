@@ -38,7 +38,16 @@ Z poważaniem,`);
   $(".card").click(function(){
     const overlayContent = $(this).find('.overlay-content');
     if (overlayContent.length) {
-
+      $(".overlay > .container").html($(overlayContent).html())
+      $(".overlay-wrapper").show();
+      $(".overlay").addClass("on");
+    }
+  })
+  $(".overlay-wrapper").click(function(e) {
+    console.log(e)
+    if (e.target === e.currentTarget) {
+      $(".overlay").removeClass("on");
+      $(".overlay-wrapper").hide();
     }
   })
 });
