@@ -39,7 +39,7 @@ const config = {
     }
   }
 }
-const livedist = 'https://centrumcyfrowe.pl/wp-content/themes/cc2018/dist/';
+const livedist = proccess.env.LIVE_DIST_FOLDER || 'dist/';
 const replacements = {
   assets: ['/assets/', livedist + 'images/' + package.name + '/'],
   depend: ['dist/', livedist],
