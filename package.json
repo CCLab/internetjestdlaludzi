@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "author": "Zachary Milonas",
   "main": "index.html",
-  "license": "BSD",
+  "license": "BSD-3-Clause",
   "scripts": {
     "gulp": "./node_modules/.bin/gulp",
     "deploy": "./node_modules/.bin/gulp deploy",
