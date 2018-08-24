@@ -44,11 +44,11 @@ const replacements = {
   assets: ['/assets/', livedist + 'images/' + package.name + '/'],
   depend: ['dist/', livedist],
   footer: ['<footer></footer>','<?php get_footer(); ?>'],
-  header: ['<!',`<?php
+  header: ['<!doctype',`<?php
 /*
  * Template name: Internet jest dla ludzi landing
  */
-?><!`],
+?><!doctype`],
 }
 
 gulp.task('build-css', () => {
