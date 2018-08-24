@@ -8,19 +8,19 @@ $(document).ready(() => {
     "zdzislaw.krasnodebski@europarl.europa.eu",
     "bogdan.wenta@europarl.europa.eu",
     "boguslaw.liberadzki@europarl.europa.eu",
-    "a.tarkowski@centrumcyfrowe.pl",
   ];
   const emailBody = encodeURIComponent(`Szanowni Państwo, 
 Piszę do Państwa w związku z planowanym na 12 września głosowaniem nad Dyrektywą w sprawie praw autorskich na jednolitym rynku cyfrowym. Jako polski wyborca i użytkownik internetu pragnę wyrazić sprzeciw wobec propozycji przyjętych dotychczas przez Komisję Prawną Parlamentu Europejskiego. 
 Proponowane przepisy niosą zagrożenie ograniczenia naszych swobód jako użytkowników.  Dlatego liczę na Państwa głos przeciwko obowiązkowi filtrowania treści na platformach internetowych oraz tworzeniu nowych praw pokrewnych dla wydawców. Proszę również o wsparcie przepisów gwarantujących szeroki zakres dozwolonego użytku dla działań edukacyjnych i naukowych.
 Z wyrazami szacunku,`);
   const emailTo = europoslowie.splice(Math.floor(Math.random()*europoslowie.length), 1);
-  const emailCc = europoslowie.join(",");
+  const emailCc = [...europoslowie, "atarkowski@centrumcyfrowe.pl"];
+  const emailBcc = emailCc.join(",");
   const emailSubject = encodeURIComponent('Prosimy o ochronę praw użytkowników w głosowaniu nad nową Dyrektywą prawnoautorską');
-  const mailtoHref = `mailto:${emailTo}?subject=${emailSubject}&bcc=${emailCc}&body=${emailBody}`;
+  const mailtoHref = `mailto:${emailTo}?subject=${emailSubject}&bcc=${emailBcc}&body=${emailBody}`;
   // mail to
-  $(".wyslijemail").click(function(e) {
-    window.open(mailtoHref);
+  $(".wyslijemail").each(function() {
+    $(this).attr('href', mailtoHref);
   });
   // smooth anchor scroll
   $(function() {
