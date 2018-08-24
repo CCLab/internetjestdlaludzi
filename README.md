@@ -33,4 +33,6 @@ npm run watch
 npm run deploy
 ```
 
-copy all generated files from `dist/` to remote location.
+Generation prepares a (wordpress page template)[https://developer.wordpress.org/themes/template-files-section/page-template-files/].
+
+To publish it just copy all generated files from `dist/` to remote location in the root theme folder (`wp-content/themes/cc2018/.`).
