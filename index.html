@@ -53,7 +53,7 @@
             <a href="#" class="wyslijemail">
             <div class="title-label sm">
               <h1>Wyślij</h1><br />
-              <h1>Email</h1><br />
+              <h1>E-mail</h1><br />
               <h1>Do&nbsp;europosła</h1><br />
             </div>
             </a>
@@ -72,7 +72,7 @@
           <a href="#" class="wyslijemail">
           <div class="title-label md position-absolute">
             <h1>Wyślij</h1><br />
-            <h1>Email</h1><br />
+            <h1>E-mail</h1><br />
             <h1>Do&nbsp;Europosła</h1>
           </div>
           </a>
@@ -122,7 +122,7 @@
         </div>
         <div class="row t2">
           <div class="col-md-5 offset-md-1">
-            <div class="card">
+            <div class="card unclickable">
               <div class="card-body">
                 <p class="card-text">
                   12 września Parlament Europejski głosować będzie nad dyrektywą o prawie autorskim na jednolitym rynku cyfrowym.
@@ -134,7 +134,7 @@
         </div>
         <div class="row t1">
           <div class="col-md-5 offset-md-1">
-            <div class="card">
+            <div class="card unclickable">
               <div class="card-body">
                 <p class="card-text">
                   Proponowane zapisy zagrażają podstawowym swobodom obywatelskim, ograniczają rozwój edukacji, nauki, biznesu i kultury. 
@@ -148,6 +148,7 @@
     </section>
     <section id="zagrozenia" class="container-fluid zagrozenia slide-3">
       <div class="kropeczki k2">&nbsp;</div>
+      <div class="container">
       <article>
         <div class="col2">
           <div class="obrazek z1">&nbsp;</div>
@@ -178,7 +179,7 @@
           <div class="card">
             <div class="card-body">
               <h2 class="card-title">
-                Nowe prawo autorskie dla wydawców
+                nowe prawo autorskie dla wydawców ograniczy obieg informacji
               </h2>
             </div>
             <div class="overlay-content">
@@ -245,11 +246,16 @@
           </div>
         </div>
       </article>
+      </div>
     </section>
     <section id="codalej" class="container-fluid slide slide-4">
       <div class="okowizjer">&nbsp;</div>
       <div class="kropeczki k1">&nbsp;</div>
-      <div class="title-label">
+      <div class="title-label t1">
+        <h1>Do&nbsp;kiedy</h1><br />
+        <h1>Mamy&nbsp;czas?</h1>
+      </div>
+      <div class="title-label pulled d-none d-sm-block">
         <h1>I&nbsp;co&nbsp;się</h1><br />
         <h1>Będzie&nbsp;działo</h1>
       </div>
@@ -323,24 +329,41 @@
             <h1>Chcesz wiedzieć więcej?</h1>
           </div>
         </div>
+        <div class="row m-4 d-none d-sm-block">
+          <div class="col-md-3">
+            <img src="/assets/longread2.png" />
+          </div>
+          <div class="col-md-3">
+            <img src="/assets/CClogo.png" />
+          </div>
+          <div class="col-md-3">
+            <img src="/assets/saveyourinternet.png" />
+          </div>
+          <div class="col-md-3">
+             <p><strong>Kontakt dla mediów:</strong></p>
+            <p>Amelia Kurp<br />
+            a.kurp@sciencepr.pl<br />
+            Kom.: +48 533 513 302</p>
+          </div>
+        </div>
         <div class="row">
           <div class="col-md-3">
           <a href="https://centrumcyfrowe.pl">
-            <img src="/assets/longread2.png" />
-            <p class="mt-4">Przeczytaj stanowisko</p>
+            <p class="mt-4">Baza wiedzy o reformie</p>
           </a>
           </div>
           <div class="col-md-3">
           <a href="https://centrumcyfrowe.pl">
-            <img src="/assets/CClogo.png" />
-            <p class="mt-4">Dowiedz się więcej o centrum cyfrowym</p>
+            <p class="mt-4">Poznaj centrum cyfrowe</p>
           </a>
           </div>
           <div class="col-md-3">
-            <p><a href="https://saveyourinternet.eu"><strong>#save your internet</strong></a></p>
+            <a href="https://saveyourinternet.eu">
+            <p class="mt-4">#SAVEYOURINTERNET</p>
+          </a>
           </div>
-          <div class="col-md-3">
-            <p><strong>Kontakt dla mediów:</strong></p>
+          <div class="col-md-3 d-block d-sm-none">
+             <p><strong>Kontakt dla mediów:</strong></p>
             <p>Amelia Kurp<br />
             a.kurp@sciencepr.pl<br />
             Kom.: +48 533 513 302</p>
@@ -348,9 +371,7 @@
         </div>
       </div>
     </section>
-    <footer>
-      Centrum cyfrowe
-    </footer>
+  <?php get_footer(); ?>
   <div class="overlay-wrapper">
   <div class="overlay">
     <div class="container">

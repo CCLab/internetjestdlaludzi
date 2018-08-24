@@ -1,20 +1,23 @@
 $(document).ready(() => {
   const europoslowie = [
     "michal.boni@europarl.europa.eu",
+    "ryszardantoni.legutko@europarl.europa.eu",
     "ryszard.czarnecki@europarl.europa.eu",
     "tadeusz.zwiefka@europarl.europa.eu",
     "lidiajoanna.geringerdeoedenberg@europarl.europa.eu",
     "zdzislaw.krasnodebski@europarl.europa.eu",
     "bogdan.wenta@europarl.europa.eu",
-    "boguslaw.liberadzki@europarl.europa.eu"
+    "boguslaw.liberadzki@europarl.europa.eu",
+    "a.tarkowski@centrumcyfrowe.pl",
   ];
-  const emailBody = encodeURIComponent(`Szanowne Posłanki, Szanowni Posłowie do Parlamentu Europejskiego,
-jako polski wyborca i użytkownik internetu, mam nadzieję że moje prawa zostaną wzięte pod uwagę w trwającej reformie prawa autorskiego. Do tej pory debata wokół tematu toczyła się z pominięciem głosu użytkowników – liczę, że tak się nie stanie 12 września i zagłosują Państwo za tym, aby nowa dyrektywa umożliwiała w internecie aktywności społeczne, naukowe i edukacyjne. 
-Prawo autorskie potrzebuje reformy, ale takiej, która uwzględni nie tylko ochronę praw twórców, ale też swobody użytkowników. Nie zgadzam się na sytuację, w której cały internet będzie czyjąś „własnością”, a poruszanie się i działanie w nim będzie nieproporcjonalnie utrudnione. Dlatego też liczę na Państwa głos przeciwko obowiązkowi filtrowania zamieszczanych przez użytkowników treści pod pretekstem ochrony praw autorskich i przeciwko rozszerzaniu prawa autorskiego, a także na Państwa wsparcie przepisów gwarantujących dozwolony użytek i chroniących domenę publiczną. 
-Z poważaniem,`);
+  const emailBody = encodeURIComponent(`Szanowni Państwo, 
+Piszę do Państwa w związku z planowanym na 12 września głosowaniem nad Dyrektywą w sprawie praw autorskich na jednolitym rynku cyfrowym. Jako polski wyborca i użytkownik internetu pragnę wyrazić sprzeciw wobec propozycji przyjętych dotychczas przez Komisję Prawną Parlamentu Europejskiego. 
+Proponowane przepisy niosą zagrożenie ograniczenia naszych swobód jako użytkowników.  Dlatego liczę na Państwa głos przeciwko obowiązkowi filtrowania treści na platformach internetowych oraz tworzeniu nowych praw pokrewnych dla wydawców. Proszę również o wsparcie przepisów gwarantujących szeroki zakres dozwolonego użytku dla działań edukacyjnych i naukowych.
+Z wyrazami szacunku,`);
   const emailTo = europoslowie.splice(Math.floor(Math.random()*europoslowie.length), 1);
   const emailCc = europoslowie.join(",");
-  const mailtoHref = `mailto:${emailTo}?cc=${emailCc}&body=${emailBody}`;
+  const emailSubject = encodeURIComponent('Prosimy o ochronę praw użytkowników w głosowaniu nad nową Dyrektywą prawnoautorską');
+  const mailtoHref = `mailto:${emailTo}?subject=${emailSubject}&bcc=${emailCc}&body=${emailBody}`;
   // mail to
   $(".wyslijemail").click(function(e) {
     window.open(mailtoHref);
