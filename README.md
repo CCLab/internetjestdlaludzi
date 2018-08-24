@@ -1,6 +1,6 @@
 # Internet jest dla ludzi (reforma)
 
-http://www.internetjestdlaludzi.pl
+http://internetjestdlaludzi.pl
 
 https://centrumcyfrowe.pl/reforma
 
