@@ -1,4 +1,4 @@
-# Internet jest dla ludzi (reforma)
+# Internet jest dla ludzi (reforma) static webiste - Centrum Cyfrowe
 
 http://internetjestdlaludzi.pl
 
