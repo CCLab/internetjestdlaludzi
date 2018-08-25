@@ -238,12 +238,13 @@ body {
     }
   }
   &.slide-5 {
-    height: 70vh;
     background-color: #fff;
+    height: initial;
     padding-top: 7rem;
     text-align: center;
     @media screen and (max-width: $breakpoint-sm) {
       padding-top: 2rem;
+      padding-bottom: 3rem;
     }
     h1 {
       font: 800 3rem 'Muli', sans-serif;
