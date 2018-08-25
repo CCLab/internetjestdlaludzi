@@ -465,7 +465,7 @@ a, a:visited {
 footer {
     padding-top: 40px;
     padding-bottom: 40px;
-    
+    background-color: #fff;
     .row:first-child >div {
         //min-height: 230px;
         .socials-menu {
@@ -535,5 +535,8 @@ footer {
         svg {
             margin-top: 10px;
         }
+    }
+    .swiper-slide:not(:first-child) {
+        display: none;
     }
 }
