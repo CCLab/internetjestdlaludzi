@@ -46,9 +46,9 @@ Z wyrazami szacunku,`);
       $(".overlay").addClass("on");
     }
   })
-  $(".overlay-wrapper").click(function(e) {
-    console.log(e)
+  $(".overlay-wrapper, .zamknij").click(function(e) {
     if (e.target === e.currentTarget) {
+      e.preventDefault();
       $(".overlay").removeClass("on");
       $(".overlay-wrapper").hide();
     }

@@ -51,6 +51,20 @@ body {
     }
     .t2 {
       margin-top: 20vh;
+      .title-label {
+        h1 {
+          @media screen and (max-width: $breakpoint-sm) {
+            font-size: 2rem;
+          }
+        }
+      }
+    }
+    .wyslijemail {
+      .title-label.sm h1 {
+        @media screen and (max-width: $breakpoint-sm) {
+          font-size: 3rem;
+        }
+      }
     }
     .ob {
       position: absolute;
@@ -102,6 +116,16 @@ body {
       position: absolute;
       left: 10%;
       bottom: 35%;
+    }
+    @media screen and (max-width: $breakpoint-sm) {
+      .card {
+        .card-body {
+          padding: 1rem;
+          .card-text {
+            font-size: 1rem;
+          }
+        }
+      } 
     }
     .t1 {
       margin-top: 5vh;
@@ -177,6 +201,10 @@ body {
           z-index: 30;
           font-size: 1.5rem;
           position: relative;
+          font-family: 'Muli';
+          strong {
+            font-weight: 800;
+          }
         }
       }
     }
@@ -186,7 +214,7 @@ body {
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
-      width: 100%;
+      width: 98%;
       justify-content: space-around;
       @media screen and (max-width: $breakpoint-sm) {
         flex-direction: column;
@@ -206,15 +234,16 @@ body {
     background-color: #fff;
     padding-top: 7rem;
     text-align: center;
+    @media screen and (max-width: $breakpoint-sm) {
+      padding-top: 2rem;
+    }
     h1 {
       font: 800 3rem 'Muli', sans-serif;
       text-transform: uppercase;
     }
     a, a:visited, a:hover {
       color: #2A2A2A;
-      @media screen and (max-width: $breakpoint-sm) {
-        text-decoration: underline;
-      }
+      text-decoration: underline;
     }
     p {
       font: 300 1.5rem 'Muli', sans-serif;
@@ -385,35 +414,51 @@ a, a:visited {
   &.on {
     display: block;
     position: relative;
-    overflow-y: scroll;
     font-size: 1.5rem;
-    width: 90%;
     margin: 2rem auto;
-    max-height: 90vh;
+    height: 70vh;
     z-index: 100;
     background-color: #fff;
+    width: 50%;
+    @media screen and (max-width: $breakpoint-sm) {
+      width: 90%;
+      height: 90vh;
+    }
   }
   .container {
-    padding-top: 3rem;
+    padding: 4rem 2rem 10rem;
     z-index: 100;
+    height: 100%;
+    overflow-y: scroll;
   }
   .bar {
     background-color: #2A2A2A;
     display: flex;
     padding: 2rem 0;
+    position: absolute;
+    bottom: 0;
+    z-index: 100;
+    width: 100%;
     justify-content: space-evenly;
     a {
       display:block;
       width: 100%;
+      background: no-repeat center/contain transparent;
+      &:hover {
+        text-decoration: none;
+      }
     }
     .fb-sharelink {
-      background: no-repeat center/contain url('/assets/share.png')
+      background-image: url('/assets/share.png')
     }
     .wyslijemail {
-      background: no-repeat center/contain url('/assets/email.png')
+      background-image: url('/assets/email.png')
     }
     .stanowisko {
-      background: no-repeat center/contain url('/assets/longread.png')
+      background-image: url('/assets/longread.png')
+    }
+    .zamknij {
+      background-image: url('/assets/close_btn.png')
     }
   }
 }
