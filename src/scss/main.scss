@@ -126,6 +126,9 @@ body {
       position: absolute;
       left: 5%;
       bottom: 35%;
+      @media screen and (max-width: $breakpoint-sm) {
+        display: none;
+      }
     }
     @media screen and (max-width: $breakpoint-sm) {
       .card {
@@ -155,20 +158,37 @@ body {
       @media screen and (max-width: $breakpoint-sm) {
         flex-direction: row;
         top: initial;
-        bottom: 5%;
+        bottom: 0;
         left: 0;
+        justify-content: center;
+        flex-wrap: wrap;
+        align-items: center;
         right: 0;
         height: initial;
+        .ob-item {
+          flex: 1 0 50%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin-bottom: 1rem;
+        }
+        &.ob-link .ob-item {
+          height: 15vh;
+        }
       }
-      .title-label > h1 {
-        @media screen and (max-width: $breakpoint-sm) {
+      
+      @media screen and (max-width: $breakpoint-sm) {
+        .title-label > h1 { 
+          font-size: 1.5rem;
+        }
+        .title-label.pull-10 > h1 {
           font-size: 1rem;
         }
       }
     }
     .ob-md {
       @media screen and (max-width: $breakpoint-sm) {
-        @include ob(10vh);
+        @include ob(15vh);
       }  
     }
 
@@ -381,8 +401,9 @@ a, a:visited {
     font-size: 1.7rem;
   }
   &.pull-10 {
-    @media screen and (min-width: $breakpoint-sm) {
-      margin-left: -100px;
+    margin-left: -100px;
+    @media screen and (max-width: $breakpoint-sm) {
+      margin-left: 0;
     }
   }
 }
