@@ -46,6 +46,14 @@ body {
      background: no-repeat center/cover url('/assets/niebo-crop.png'); 
      z-index: -10;
     }
+    .cc-logo {
+      width: 10rem;
+      position: absolute;
+      z-index: 1000;
+      top: 3rem;
+      right: 3rem;
+      background: no-repeat center/contain url('/assets/cc-logo.png');
+    }
     .t1 {
       margin-top: 7vh;
     }
