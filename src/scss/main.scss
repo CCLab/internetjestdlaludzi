@@ -447,13 +447,12 @@ a, a:visited {
     position: relative;
     font-size: 1.5rem;
     margin: 2rem auto;
-    height: 70vh;
+    height: 90vh;
     z-index: 100;
     background-color: #fff;
     width: 50%;
     @media screen and (max-width: $breakpoint-sm) {
       width: 90%;
-      height: 90vh;
     }
   }
   .container {
@@ -467,6 +466,7 @@ a, a:visited {
     display: flex;
     padding: 2rem 0;
     position: absolute;
+    font-size: 1.4rem;
     bottom: 0;
     z-index: 100;
     width: 100%;
@@ -480,10 +480,10 @@ a, a:visited {
       }
     }
     .fb-sharelink {
-      background-image: url('/assets/share.png')
+      background-image: url('/assets/share.svg')
     }
     .wyslijemail {
-      background-image: url('/assets/email.png')
+      background-image: url('/assets/mail.svg')
     }
     .stanowisko {
       color: $orange;
@@ -491,6 +491,9 @@ a, a:visited {
     }
     .zamknij {
       background-image: url('/assets/close_btn.png')
+    }
+    @media screen and (max-width: $breakpoint-sm) {
+      font-size: 1rem;
     }
   }
 }
