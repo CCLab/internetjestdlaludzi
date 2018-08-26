@@ -24,11 +24,11 @@ const config = {
     folder: {
       js: 'dist/js',
       css: 'dist/css',
-      html: 'dist'
+      html: '.'
     },
     css: `${package.name}2.css`,
     js: `${package.name}2.js`,
-    html: `template-${package.name}.php`,
+    html: `template.php`,
   },
   sassOptions: {
     dev: {
