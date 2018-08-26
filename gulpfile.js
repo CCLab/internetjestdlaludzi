@@ -26,8 +26,8 @@ const config = {
       css: 'dist/css',
       html: 'dist'
     },
-    css: `${package.name}.css`,
-    js: `${package.name}.js`,
+    css: `${package.name}2.css`,
+    js: `${package.name}2.js`,
     html: `template-${package.name}.php`,
   },
   sassOptions: {
