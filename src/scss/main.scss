@@ -34,8 +34,8 @@ body {
   &.slide-1 {
     background: no-repeat center/cover url('/assets/ludzie-ziemia.png');
       @media screen and (max-width: $breakpoint-sm) {
-        background-size: contain;
-        background-position: center bottom;
+        background-size: 250%;
+        background-position: left bottom;
       }
     .niebo {
      position: absolute;
@@ -109,7 +109,7 @@ body {
       @media screen and (max-width: $breakpoint-sm) {
         right: 0;
         height: 100%;
-        width: 50vw;
+        width: 80vw;
         background-position: center bottom;
         margin-top: 0;
       }
@@ -121,14 +121,6 @@ body {
       height: 80vh;
       width: 66vw;
       background: no-repeat center/cover url('/assets/tlo.png');
-    }
-    .wyslij-email {
-      position: absolute;
-      left: 5%;
-      bottom: 35%;
-      @media screen and (max-width: $breakpoint-sm) {
-        display: none;
-      }
     }
     @media screen and (max-width: $breakpoint-sm) {
       .card {
@@ -210,7 +202,7 @@ body {
       position: absolute;
       &.pulled {
         right: 25%;
-        top: 30%;
+        top: 25vh;
         @media screen and (max-width: $breakpoint-sm) {
           left: 10%;
           right: initial;
@@ -240,7 +232,7 @@ body {
     }
     .series {
       position: absolute;
-      bottom: 8rem;
+      bottom: 4rem;
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
@@ -494,7 +486,8 @@ a, a:visited {
       background-image: url('/assets/email.png')
     }
     .stanowisko {
-      background-image: url('/assets/longread.png')
+      color: $orange;
+      text-align: center;
     }
     .zamknij {
       background-image: url('/assets/close_btn.png')
