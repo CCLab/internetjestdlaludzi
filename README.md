@@ -6,6 +6,8 @@ https://centrumcyfrowe.pl/reforma
 
 ## Builiding locally
 
+To build and modify this project you need `npm`.
+
 If you're using yarn, like the original author - @zmilonas - replace all `npm` and `npm run` with `yarn`.
 
 1. Install dependencies
@@ -35,4 +37,6 @@ npm run deploy
 
 Generation prepares a [wordpress page template](https://developer.wordpress.org/themes/template-files-section/page-template-files/).
 
-To publish it just copy all generated files from `dist/` to remote location in the root theme folder (`wp-content/themes/cc2018/.`).
+After the script is ran, a `template.php` file and `dist` directory are updated with deployment ready code. 
+
+To publish it just copy the `template.php` and `dist/` to remote location in the root theme folder (e.g. `wp-content/themes/cc2018/.`). Image assets are not managed by the deploy script, they are kept in `assets/` directory in the repo and in `dist/images/internetjestdlaludzi` on remote. 
