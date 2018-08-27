@@ -198,19 +198,13 @@ body {
       top: 15%;
       background: no-repeat center/contain url('/assets/okowizjer.png');
     }
-    .title-label {
-      position: absolute;
-      &.pulled {
-        right: 25%;
-        top: 25vh;
-        @media screen and (max-width: $breakpoint-sm) {
-          left: 10%;
-          right: initial;
-        }
+    .titles {
+      .t1 {
+        margin-top: 2rem;
+        padding-left: 2rem;
       }
-      &.t1 {
-        left: 10%;
-        top: 10%;
+      .t2 {
+        margin-top: 5rem;
       }
     }
     .card {
@@ -232,11 +226,11 @@ body {
     }
     .series {
       position: absolute;
-      bottom: 4rem;
+      bottom: 2rem;
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
-      width: 98%;
+      width: 93%;
       justify-content: space-around;
       @media screen and (max-width: $breakpoint-sm) {
         flex-direction: column;
