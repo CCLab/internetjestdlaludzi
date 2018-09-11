@@ -954,6 +954,12 @@ detect-indent@^4.0.0:
   dependencies:
     repeating "^2.0.0"
 
+dom7@^2.0.7:
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/dom7/-/dom7-2.1.1.tgz#3de0f44a1a822a524d4090ba25148b070e53738c"
+  dependencies:
+    ssr-window "^1.0.1"
+
 duplexer2@0.0.2:
   version "0.0.2"
   resolved "https://registry.yarnpkg.com/duplexer2/-/duplexer2-0.0.2.tgz#c614dcf67e2fb14995a91711e5a617e8a60a31db"
@@ -2868,6 +2874,10 @@ sshpk@^1.7.0:
     jsbn "~0.1.0"
     tweetnacl "~0.14.0"
 
+ssr-window@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/ssr-window/-/ssr-window-1.0.1.tgz#30752a6a4666e7767f0b7e6aa6fc2fdbd0d9b369"
+
 static-extend@^0.1.1:
   version "0.1.2"
   resolved "https://registry.yarnpkg.com/static-extend/-/static-extend-0.1.2.tgz#60809c39cbff55337226fd5e0b520f341f1fb5c6"
@@ -2950,6 +2960,13 @@ supports-color@^5.3.0:
   resolved "https://registry.yarnpkg.com/supports-color/-/supports-color-5.5.0.tgz#e2e69a44ac8772f78a1ec0b35b689df6530efc8f"
   dependencies:
     has-flag "^3.0.0"
+
+swiper@^4.2.2:
+  version "4.3.5"
+  resolved "https://registry.yarnpkg.com/swiper/-/swiper-4.3.5.tgz#40369d4870e66cd10eb9862329af63b8a582aca1"
+  dependencies:
+    dom7 "^2.0.7"
+    ssr-window "^1.0.1"
 
 tar@^2.0.0:
   version "2.2.1"

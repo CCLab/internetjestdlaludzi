@@ -53,4 +53,18 @@ Z wyrazami szacunku,`);
       $(".overlay-wrapper").hide();
     }
   })
+
+  const swiper = new Swiper('.swiper-footer-logos', {
+      autoplay: {
+          delay: 4000,
+          disableOnInteraction: false
+      },
+      speed: 1000,
+      freeMode: false,
+      slidesPerView: '1',
+      effect: 'fade',
+      fadeEffect: {
+          crossFade: true
+      },
+  });
 });
