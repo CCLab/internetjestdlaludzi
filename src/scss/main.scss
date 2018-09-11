@@ -346,6 +346,16 @@ a, a:visited {
     &.z4 { background-image: url('/assets/zagrozenia_4.jpg') }
     &.z5 { background-image: url('/assets/zagrozenia_5.jpg') }
   }
+  .recent-news {
+    text-transform: uppercase;
+    color: $orange;
+    margin: 2rem;
+    font-family: 'Muli', sans-serif;
+    font-weight: 800;
+  }
+  article:last-child {
+    margin-bottom: 4rem;
+  }
 }
 .ob {
   background-color: $accent;
