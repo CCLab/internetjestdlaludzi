@@ -251,7 +251,7 @@
       <?php
           $args = array(
               'post_type' => 'czytelnia',
-              'posts_per_page' => 1,
+              'posts_per_page' => 4,
               'tag' => 'reforma-prawa-autorskiego'
           );
           $loop = new wp_Query($args);
@@ -259,22 +259,6 @@
             $loop->the_post();
       ?>
       //-->
-      <div>
-      <article>
-        <div class="col1">
-          <div class="card unclickable">
-            <div class="card-body">
-              <a href="<?=get_permalink()?>">
-              <?php the_title('<h2 class="card-title">', '</h2>'); ?>
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="col2">
-          <div class="obrazek z1">&nbsp;</div>
-        </div>
-      </article>
-      </div>
       <div>
       <article>
         <div class="col1">
