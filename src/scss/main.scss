@@ -501,6 +501,22 @@ a, a:visited {
     }
   }
 }
+.news-slider {
+  .slick-prev {
+    &:before {
+      content: "<"
+    }
+  }
+  .slick-next {
+    &:before {
+      content: ">"
+    }
+  }
+  .slick-prev:before, .slick-next:before {
+      color: $orange;
+      font-size: 1.5rem;
+  }
+}
 footer {
     padding-top: 40px;
     padding-bottom: 40px;

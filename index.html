@@ -246,6 +246,7 @@
         </div>
       </article>
       <h1 class="recent-news">Co nowego na froncie?</h1>
+      <div class="news-slider">
       <!--\\
       <?php
           $args = array(
@@ -258,9 +259,10 @@
             $loop->the_post();
       ?>
       //-->
+      <div>
       <article>
         <div class="col1">
-          <div class="card">
+          <div class="card unclickable">
             <div class="card-body">
               <a href="<?=get_permalink()?>">
               <?php the_title('<h2 class="card-title">', '</h2>'); ?>
@@ -272,6 +274,23 @@
           <div class="obrazek z1">&nbsp;</div>
         </div>
       </article>
+      </div>
+      <div>
+      <article>
+        <div class="col1">
+          <div class="card unclickable">
+            <div class="card-body">
+              <a href="<?=get_permalink()?>">
+              <?php the_title('<h2 class="card-title">', '</h2>'); ?>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col2">
+          <div class="obrazek z1">&nbsp;</div>
+        </div>
+      </article>
+      </div>
       <?php } ?>
       </div>
     </section>

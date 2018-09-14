@@ -12,12 +12,13 @@ const config = {
   input: {
     css: [
       'node_modules/bootstrap/scss/bootstrap.scss',
-      'node_modules/swiper/dist/css/swiper.min.css',
+      'node_modules/slick-carousel/slick/slick.scss',
+      'node_modules/slick-carousel/slick/slick-theme.scss',
       'src/scss/*.scss',
     ],
     js: [
       'node_modules/jquery/dist/jquery.js',
-      'node_modules/swiper/dist/js/swiper.min.js',
+      'node_modules/slick-carousel/slick/slick.js',
       'src/js/*.js',
     ],
     html: 'index.html',
