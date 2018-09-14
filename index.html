@@ -265,7 +265,8 @@
           <div class="card unclickable">
             <div class="card-body">
               <a href="<?=get_permalink()?>">
-              <?php the_title('<h2 class="card-title">', '</h2>'); ?>
+              <h2 class="card-title"><?=the_title()?></h2>
+              <h2 class="card-title text-muted"><?=the_date()?></h2>
               </a>
             </div>
           </div>
